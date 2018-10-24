@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="fx.controllers.cliente.FXMLAddClienteController">
+   <children>
+      <Label layoutX="96.0" layoutY="75.0" prefHeight="17.0" prefWidth="72.0" text="idCliente" />
+      <Label layoutX="96.0" layoutY="228.0" prefHeight="17.0" prefWidth="72.0" text="Teléfono" />
+      <Label layoutX="96.0" layoutY="152.0" prefHeight="17.0" prefWidth="72.0" text="Nombre" />
+      <TextField fx:id="fxIdCliente" layoutX="193.0" layoutY="71.0" prefHeight="25.0" prefWidth="214.0" />
+      <TextField fx:id="fxTelefonoCliente" layoutX="193.0" layoutY="224.0" prefHeight="25.0" prefWidth="214.0" />
+      <TextField fx:id="fxNombreCliente" layoutX="194.0" layoutY="148.0" prefHeight="25.0" prefWidth="214.0" />
+      <Button layoutX="255.0" layoutY="298.0" mnemonicParsing="false" onAction="#clickAniadirCliente" prefHeight="25.0" prefWidth="91.0" text="Añadir" />
+   </children>
+</AnchorPane>
