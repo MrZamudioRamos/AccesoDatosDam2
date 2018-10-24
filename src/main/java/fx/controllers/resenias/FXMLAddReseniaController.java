@@ -5,6 +5,7 @@
  */
 package fx.controllers.resenias;
 
+import dao.ReseniasDao;
 import fx.controllers.PantallaInicioController;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -13,7 +14,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
-import objetos.Resenias;
 import servicios.ArticulosServicios;
 import servicios.ReseniasServicios;
 
@@ -57,6 +57,7 @@ public class FXMLAddReseniaController implements Initializable {
 
         ArticulosServicios as = new ArticulosServicios();
         ReseniasServicios rs = new ReseniasServicios();
+        ReseniasDao rd = new ReseniasDao();
 
         if (as.comprobarArticulo(fxArticuloResenia.getText()) != true) {
 
@@ -74,6 +75,9 @@ public class FXMLAddReseniaController implements Initializable {
                 
                 alertInformacion.setContentText("Resenia introducida correctamente");
                 alertInformacion.showAndWait();
+                
+                rd.guardaAllResenias(rd.getAllResenias());
+                
             } else {
                 alertError.setContentText("No se pudo guardar la resenia");
                 alertError.showAndWait();

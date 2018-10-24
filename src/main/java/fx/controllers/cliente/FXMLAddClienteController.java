@@ -8,7 +8,6 @@ package fx.controllers.cliente;
 import dao.ClientesDao;
 import fx.controllers.PantallaInicioController;
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -84,6 +83,7 @@ public class FXMLAddClienteController implements Initializable {
      * @param url
      * @param rb
      */
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

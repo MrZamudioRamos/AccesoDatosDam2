@@ -13,15 +13,15 @@ package objetos;
 public class Resenias {
     private String item;
     private String date;
-    private String comments;
+    private String comment;
 
     public Resenias() {
     }
 
-    public Resenias(String item, String date, String comments) {
+    public Resenias(String item, String date, String comment) {
         this.item = item;
         this.date = date;
-        this.comments = comments;
+        this.comment = comment;
     }
 
     public String getItem() {
@@ -41,16 +41,16 @@ public class Resenias {
     }
 
     public String getComments() {
-        return comments;
+        return comment;
     }
 
-    public void setComments(String comments) {
-        this.comments = comments;
+    public void setComments(String comment) {
+        this.comment = comment;
     }
 
     @Override
     public String toString() {
-        return "Resenias{" + "item=" + item + ", date=" + date + ", comments=" + comments + '}';
+        return "Resenias{" + "item=" + item + ", date=" + date + ", comment=" + comment + '}';
     }
     
     

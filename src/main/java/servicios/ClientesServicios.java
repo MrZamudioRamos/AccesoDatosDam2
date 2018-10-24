@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package servicios;
 
 import dao.ClientesDao;
@@ -13,6 +14,7 @@ import java.util.List;
  *
  * @author Ricardo
  */
+
 public class ClientesServicios {
     
     public List<String> getAllClientes() {
@@ -76,4 +78,47 @@ public class ClientesServicios {
         clientes.remove(linea);
         return dao.guardaAllClientes(clientes);
     }
+    
+    public String getIdCliente(){
+        
+        ClientesDao dao = new ClientesDao();
+        List<String> lineas = dao.getAllClientes();
+        String[] partesCliente = null;
+        
+        for(String i : lineas){
+            partesCliente = i.split(";");
+        }
+        String id = partesCliente[0];
+        
+        return id;
+    }
+    
+    public String getNameCliente(){
+        
+        ClientesDao dao = new ClientesDao();
+        List<String> lineas = dao.getAllClientes();
+        String[] partesCliente = null;
+        
+        for(String i : lineas){
+            partesCliente = i.split(";");
+        }
+        String name = partesCliente[1];
+        
+        return name;
+    }
+    
+    public String getPhoneCliente(){
+        
+        ClientesDao dao = new ClientesDao();
+        List<String> lineas = dao.getAllClientes();
+        String[] partesCliente = null;
+        
+        for(String i : lineas){
+            partesCliente = i.split(";");
+        }
+        String phone = partesCliente[2];
+        
+        return phone;
+    }
+    
 }

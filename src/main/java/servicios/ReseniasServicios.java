@@ -75,12 +75,53 @@ public class ReseniasServicios {
 
         return dao.addReseniaDao(nueva);
     }
-   
 
     public boolean borrarResenia(String linea) {
         ReseniasDao dao = new ReseniasDao();
         List<String> resenias = dao.getAllResenias();
         resenias.remove(linea);
         return dao.guardaAllResenias(resenias);
+    }
+
+    public String getItemCliente() {
+
+        ReseniasDao dao = new ReseniasDao();
+        List<String> lineas = dao.getAllResenias();
+        String[] partesCliente = null;
+
+        for (String i : lineas) {
+            partesCliente = i.split(";");
+        }
+        String item = partesCliente[0];
+
+        return item;
+    }
+
+    public String getDateCliente() {
+
+        ReseniasDao dao = new ReseniasDao();
+        List<String> lineas = dao.getAllResenias();
+        String[] partesCliente = null;
+
+        for (String i : lineas) {
+            partesCliente = i.split(";");
+        }
+        String date = partesCliente[1];
+
+        return date;
+    }
+
+    public String getCommentCliente() {
+
+        ReseniasDao dao = new ReseniasDao();
+        List<String> lineas = dao.getAllResenias();
+        String[] partesCliente = null;
+
+        for (String i : lineas) {
+            partesCliente = i.split(";");
+        }
+        String comment = partesCliente[2];
+
+        return comment;
     }
 }

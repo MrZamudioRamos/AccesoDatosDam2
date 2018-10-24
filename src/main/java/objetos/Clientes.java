@@ -15,7 +15,7 @@ public class Clientes {
     private String id;
     private String name;
     private String phone;
-    private List<Resenias>  resenias;
+    private List<Resenias> resenias;
     
     public Clientes() {
     }
